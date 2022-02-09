@@ -14,7 +14,6 @@ let Comment = () => {
         let newComment = [...comment, commentObj]
         setComment(newComment);
     }
-
     let deleteThis = (indexToDelete) => {
         let newComment = comment.filter(function(val, index) {
             if(indexToDelete == index){
@@ -24,11 +23,8 @@ let Comment = () => {
         });
         setComment(newComment)
     }
-
     return (
-
         <div>
-
             <form onSubmit={AddComment}>
                 <input type="text" name="title" placeholder="Title" className="titleClass"/>
                 <input type="text" name="author" placeholder="Your Name : " className="authorClass"/>
@@ -37,7 +33,6 @@ let Comment = () => {
                 <br />
                 <button className="bigButton">Post your Comment</button>
             </form>
-
             {comment.map((val, index) => {
                 if( val.title == "" && val.body == "" && val.author == "" ){
                     return <div className="errordata">
@@ -72,11 +67,9 @@ let Comment = () => {
                         </div>
                     ) 
                 }
-            }
-                
+                }         
             })}
         </div>
-
     )
 }
 export default Comment;

@@ -28,8 +28,6 @@ const Ecommerce = () => {
                 <br />
                 <button className="bigButton">Add</button>
                 <br />
-
-
             </form>
             {product.map((val, index) => {
                 if (index == 0) {
@@ -55,12 +53,12 @@ const Ecommerce = () => {
                                             Description
                                         </td>
                                         <td>
-                                        {val.description}
+                                            {val.description}
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                           Price 
+                                            Price
                                         </td>
                                         <td>
                                             {val.price}
@@ -72,7 +70,7 @@ const Ecommerce = () => {
                                             Color
                                         </td>
                                         <td>
-                                        {val.color}
+                                            {val.color}
                                         </td>
 
                                     </tr>
